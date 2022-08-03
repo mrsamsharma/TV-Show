@@ -70,15 +70,18 @@ footer span {
   position: fixed;
   inset: 0;
   overflow-y: scroll;
+
   /* background: #6470d7; */
 
   background-color: #000;
+
   /* mix-blend-mode: multiply;
   backdrop-filter: blur(10px); */
 }
 
 .popup {
   min-height: 100px;
+
   /* background: #fff; */
   background-color: #000;
   max-width: 100%;
@@ -98,6 +101,7 @@ footer span {
   max-width: 100%;
   max-height: 600px;
 }
+
 .close-popup-btn {
   position: absolute;
   top: 16px;
@@ -116,6 +120,7 @@ h1 {
   margin: 16px;
   font-size: 38px;
 }
+
 .popup .details ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -129,6 +134,7 @@ h1 {
 .popup .details ul li span:nth-child(2) {
   font-weight: 400;
 }
+
 .popup .details .excerpt {
   text-align: start;
 }
