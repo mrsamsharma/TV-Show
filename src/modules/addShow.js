@@ -22,4 +22,4 @@ export default (id, title, image) => {
   commentBtn.textContent = 'Comment';
   showDiv.appendChild(commentBtn);
   showContainer.appendChild(showDiv);
-}
+};
