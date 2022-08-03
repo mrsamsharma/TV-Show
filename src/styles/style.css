@@ -51,3 +51,19 @@ footer {
 footer span {
     font-size: 18px;
 }
+
+.shows-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-icon {
+  display: block;
+  background-image: url(../assets/love.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  cursor: pointer;
+}
