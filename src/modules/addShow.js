@@ -19,6 +19,7 @@ export default (id, title, image) => {
   likesNumber.textContent = '2';
   showDiv.appendChild(likesNumber);
   const commentBtn = document.createElement('button');
+  commentBtn.className = 'comment-btn';
   commentBtn.textContent = 'Comment';
   showDiv.appendChild(commentBtn);
   showContainer.appendChild(showDiv);

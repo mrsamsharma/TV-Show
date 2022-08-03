@@ -64,3 +64,83 @@ footer span {
   height: 30px;
   cursor: pointer;
 }
+
+.popup-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  overflow-y: scroll;
+
+  /* background: #6470d7; */
+
+  background-color: #000;
+
+  /* mix-blend-mode: multiply;
+  backdrop-filter: blur(10px); */
+}
+
+.popup {
+  min-height: 100px;
+
+  /* background: #fff; */
+  background-color: #000;
+  max-width: 100%;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  margin: 30px;
+  padding: 16px;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.original-img {
+  object-fit: cover;
+  width: 700px;
+  max-width: 100%;
+  max-height: 600px;
+}
+
+.close-popup-btn {
+  position: absolute;
+  top: 16px;
+  right: 10%;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.popup .details {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 16px;
+  font-size: 38px;
+}
+
+.popup .details ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 18px auto;
+}
+
+.popup .details ul li span:nth-child(1) {
+  font-weight: 500;
+}
+
+.popup .details ul li span:nth-child(2) {
+  font-weight: 400;
+}
+
+.popup .details .excerpt {
+  text-align: start;
+}
+
+.popup h4 {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 30px;
+}
