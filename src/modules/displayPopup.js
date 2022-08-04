@@ -56,7 +56,7 @@ export default (element) => {
     const ul = document.querySelector('.comments-list');
     showComments.forEach((showComment) => {
       ul.innerHTML += `
-          <li>
+          <li class="item">
             <span>${showComment.creation_date} ${showComment.username}:</span> <span>${showComment.comment}</span>
           </li>
         `;
