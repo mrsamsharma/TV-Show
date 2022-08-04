@@ -13,4 +13,6 @@ export default async (showId, name, comment) => {
       comment,
     }),
   });
+
+  commentsCounter();
 };
