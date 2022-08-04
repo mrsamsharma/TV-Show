@@ -45,7 +45,7 @@ export default (element) => {
           <br />
           <textarea id="comment" cols="36" rows="10" placeholder="Your insights"></textarea>
           <br>
-          <button class="submit-comment" id=${showId}>Comment</button>
+          <button class="submit-comment" id=${showId} type="button">Comment</button>
         </form>
       </div>
     </div>
