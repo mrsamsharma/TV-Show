@@ -1,4 +1,5 @@
 import getShow from './getShow.js';
+import getShowComments from './getShowComments.js';
 
 export default (element) => {
   const showId = Number(element.parentElement.id);
