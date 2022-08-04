@@ -2,6 +2,8 @@ import addShow from './addShow.js';
 import getShows from './getShows.js';
 import displayPopup from './displayPopup.js';
 import displayLikes from './displayLikes.js';
+import getLikes from './getLikes.js';
+import addLike from './addLike.js';
 
 const shuffle = (array) => {
   array.sort(() => Math.random() - 0.5);
@@ -10,7 +12,7 @@ const shuffle = (array) => {
 const loadShows = async () => {
   let shows = [];
   shows = await getShows();
-  shuffle(shows);
+  // shuffle(shows);
   shows = shows.filter((each, index) => index < 20);
   shows.forEach((each) => {
     addShow(each.id, each.name, each.image.medium);
@@ -38,4 +40,13 @@ popupContainer.addEventListener('click', (e) => {
   }
 });
 
-displayLikes();
+showsWrapper.addEventListener('click', async (e) => {
+  const element = e.target;
+  if (element.classList.contains('like-icon')) {
+    await addLike(element.parentElement.parentElement.parentElement.id);
+    let likes = '';
+    likes = await displayLikes(element.parentElement.parentElement.parentElement.id);
+    element.nextSibling.innerHTML = likes;
+  }
+});
+

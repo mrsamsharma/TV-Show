@@ -19,9 +19,9 @@ export default (id, title, image) => {
   likeContainer.className = 'like-container';
   const likeIcon = document.createElement('i');
   likeIcon.className = 'like-icon';
-  likeIcon.addEventListener('click', (e) => {
-    addLike(e.target.parentElement.parentElement.parentElement.id);
-  });
+  // likeIcon.addEventListener('click', (e) => {
+  //   addLike(e.target.parentElement.parentElement.parentElement.id);
+  // });
   likeContainer.appendChild(likeIcon);
   const likesNumber = document.createElement('span');
   likesNumber.className = 'like-number';
