@@ -1,1 +1,1 @@
-export default document.querySelectorAll('.shows').length;
+export default () => document.querySelectorAll('.show').length;
