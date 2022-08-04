@@ -1,11 +1,11 @@
-import getShow from "./getShow.js";
-import getShowComments from "./getShowComments.js";
+import getShow from './getShow.js';
+import getShowComments from './getShowComments.js';
 
 export default (element) => {
   const showId = Number(element.parentElement.id);
-  const popupContainer = document.querySelector(".popup-container");
-  popupContainer.style.display = "block";
-  document.querySelector("#body").style.overflow = "hidden";
+  const popupContainer = document.querySelector('.popup-container');
+  popupContainer.style.display = 'block';
+  document.querySelector('#body').style.overflow = 'hidden';
 
   const loadShow = async () => {
     let show = {};
@@ -52,8 +52,8 @@ export default (element) => {
       `;
 
     // Displaying comments
-    let showComments = await getShowComments(showId); //show comments array
-    let ul = document.querySelector(".comments-list");
+    const showComments = await getShowComments(showId); // show comments array
+    const ul = document.querySelector('.comments-list');
     showComments.forEach((showComment) => {
       ul.innerHTML += `
           <li>
