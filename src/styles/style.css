@@ -65,6 +65,10 @@ footer span {
   cursor: pointer;
 }
 
+.like-icon:active {
+  background-image: url(../assets/liked.png);
+}
+
 .popup-container {
   display: none;
   position: fixed;

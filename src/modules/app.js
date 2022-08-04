@@ -1,6 +1,7 @@
 import addShow from './addShow.js';
 import getShows from './getShows.js';
 import displayPopup from './displayPopup.js';
+import displayLikes from './displayLikes.js';
 
 const shuffle = (array) => {
   array.sort(() => Math.random() - 0.5);
@@ -36,3 +37,5 @@ popupContainer.addEventListener('click', (e) => {
     document.querySelector('#body').style.overflow = 'visible';
   }
 });
+
+displayLikes();
