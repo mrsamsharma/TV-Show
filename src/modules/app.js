@@ -3,7 +3,6 @@ import getShows from './getShows.js';
 import displayPopup from './displayPopup.js';
 import displayLikes from './displayLikes.js';
 import addLike from './addLike.js';
-import getLikes from './getLikes.js';
 import itemsCounter from './itemsCounter.js';
 
 const title = document.querySelector('.shows-count');
@@ -54,17 +53,3 @@ showsWrapper.addEventListener('click', async (e) => {
 window.onload = loadShows().then(() => {
   title.textContent = `Tv Shows(${itemsCounter()})`;
 });
-
-// document.addEventListener('DOMContentLoaded', async (e) => {
-//   let likesArr = [];
-//   likesArr = await getLikes();
-//   likesArr.forEach((each) => {
-//     let domLikes = '';
-//     domLikes = displayLikes(each.item_id);
-//     e.target.classList.contains('like-number').innerHTML = domLikes;
-//   });
-// });
-
-// document.querySelector('.shows-count').innerHTML = `
-//   Tv Shows (${itemsCounter()})
-// `;
