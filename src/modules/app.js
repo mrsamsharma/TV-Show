@@ -24,7 +24,7 @@ const loadShows = async () => {
 
 // Displaying pop-up when comment btn is clicked
 const showsWrapper = document.querySelector('.shows-wrapper');
-showsWrapper.addEventListener('click', (e) => {
+showsWrapper.addEventListener('click', async (e) => {
   const element = e.target;
   if (element.classList.contains('comment-btn')) {
     displayPopup(element);
