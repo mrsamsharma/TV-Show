@@ -1,5 +1,6 @@
 import getShow from './getShow.js';
 import getShowComments from './getShowComments.js';
+import commentsCounter from './commentsCounter.js';
 
 export default (element) => {
   const showId = Number(element.parentElement.id);
@@ -37,7 +38,7 @@ export default (element) => {
       </div>
       <!-- comments -->
       <div class="comments">
-        <h4 class="comments-count">Comments(5)</h4>
+        <h4>Comments(<span class="comments-count"></span>)</h4>
         <ul class="comments-list"></ul>
         <h4>Add Comment</h4>
         <form id="add-comment">
@@ -61,6 +62,7 @@ export default (element) => {
           </li>
         `;
     });
+ 
   };
 
   loadShow();
