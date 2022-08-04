@@ -4,6 +4,7 @@ import displayPopup from './displayPopup.js';
 import displayLikes from './displayLikes.js';
 import addLike from './addLike.js';
 import itemsCounter from './itemsCounter.js';
+import addComment from './addComment.js';
 
 const title = document.querySelector('.shows-count');
 
@@ -45,11 +46,37 @@ showsWrapper.addEventListener('click', async (e) => {
   if (element.classList.contains('like-icon')) {
     await addLike(element.parentElement.parentElement.parentElement.id);
     let likes = '';
-    likes = await displayLikes(element.parentElement.parentElement.parentElement.id);
+    likes = await displayLikes(
+      element.parentElement.parentElement.parentElement.id,
+    );
     element.nextSibling.innerHTML = likes;
   }
 });
 
 window.onload = loadShows().then(() => {
   title.textContent = `Tv Shows(${itemsCounter()})`;
+});
+
+// add comment
+popupContainer.addEventListener('click', (e) => {
+  const element = e.target;
+  if (element.classList.contains('submit-comment')) {
+    const name = document.querySelector('#name').value;
+    const comment = document.querySelector('#comment').value;
+    const showId = element.id;
+
+    if (name === '' || comment === '') return;
+    const date = new Date().toISOString().substring(0, 10);
+
+    addComment(showId, name, comment);
+
+    const ul = document.querySelector('.comments-list');
+    ul.innerHTML += `
+    <li class="item">
+      <span>${date} ${name}:</span> <span>${comment}</span>
+    </li>
+  `;
+    document.querySelector('#name').value = '';
+    document.querySelector('#comment').value = '';
+  }
 });
