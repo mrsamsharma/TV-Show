@@ -34,6 +34,25 @@ export default (element) => {
         ${show.summary}
         </div>
       </div>
+      <!-- comments -->
+      <div class="comments">
+        <h4 class="comments-count">Comments(5)</h4>
+        <ul>
+          <li>
+            <span>03/11/2021 Alex:</span> <span>I'd love to buy it!</span>
+          </li>
+          <li><span>03/11/2021 Mia:</span><span>I love</span></li>
+        </ul>
+
+        <h4>Add Comment</h4>
+        <form id="add-comment">
+          <input type="text" id="name" placeholder="Your name" />
+          <br />
+          <textarea id="name" cols="36" rows="10" placeholder="Your insights"></textarea>
+          <br>
+          <button id="submit-comment">Comment</button>
+        </form>
+      </div>
     </div>
       `;
   };
