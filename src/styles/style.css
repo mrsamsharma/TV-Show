@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -143,4 +143,44 @@ h1 {
   font-size: 21px;
   font-weight: 400;
   margin-top: 30px;
+}
+
+.comments ul {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: start;
+  margin-top: 12px;
+}
+
+.comments ul li {
+  margin-top: 5px;
+}
+
+.comments li span:nth-child(2) {
+  color: #ffff00;
+}
+
+#add-comment {
+  max-width: 600px;
+  margin: auto;
+  text-align: start;
+}
+
+#add-comment input {
+  margin-top: 21px;
+  padding: 6px;
+}
+
+#add-comment textarea {
+  margin: 14px 0;
+  padding: 6px;
+}
+
+#add-comment button {
+  color: #000;
+  background-color: #fff;
+  min-width: 120px;
+  min-height: 26px;
+  cursor: pointer;
 }
