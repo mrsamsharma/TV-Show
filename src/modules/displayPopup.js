@@ -1,11 +1,11 @@
-import getShow from './getShow.js';
-import getShowComments from './getShowComments.js';
+import getShow from "./getShow.js";
+import getShowComments from "./getShowComments.js";
 
 export default (element) => {
   const showId = Number(element.parentElement.id);
-  const popupContainer = document.querySelector('.popup-container');
-  popupContainer.style.display = 'block';
-  document.querySelector('#body').style.overflow = 'hidden';
+  const popupContainer = document.querySelector(".popup-container");
+  popupContainer.style.display = "block";
+  document.querySelector("#body").style.overflow = "hidden";
 
   const loadShow = async () => {
     let show = {};
@@ -38,13 +38,7 @@ export default (element) => {
       <!-- comments -->
       <div class="comments">
         <h4 class="comments-count">Comments(5)</h4>
-        <ul>
-          <li>
-            <span>03/11/2021 Alex:</span> <span>I'd love to buy it!</span>
-          </li>
-          <li><span>03/11/2021 Mia:</span><span>I love</span></li>
-        </ul>
-
+        <ul class="comments-list"></ul>
         <h4>Add Comment</h4>
         <form id="add-comment">
           <input type="text" id="name" placeholder="Your name" />
@@ -56,6 +50,17 @@ export default (element) => {
       </div>
     </div>
       `;
+
+    // Displaying comments
+    let showComments = await getShowComments(showId); //show comments array
+    let ul = document.querySelector(".comments-list");
+    showComments.forEach((showComment) => {
+      ul.innerHTML += `
+          <li>
+            <span>${showComment.creation_date} ${showComment.username}:</span> <span>${showComment.comment}</span>
+          </li>
+        `;
+    });
   };
 
   loadShow();
