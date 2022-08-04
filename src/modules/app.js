@@ -1,6 +1,9 @@
 import addShow from './addShow.js';
 import getShows from './getShows.js';
 import displayPopup from './displayPopup.js';
+import displayLikes from './displayLikes.js';
+import addLike from './addLike.js';
+import getLikes from './getLikes.js';
 
 const shuffle = (array) => {
   array.sort(() => Math.random() - 0.5);
@@ -35,4 +38,24 @@ popupContainer.addEventListener('click', (e) => {
     popupContainer.style.display = 'none';
     document.querySelector('#body').style.overflow = 'visible';
   }
+});
+
+showsWrapper.addEventListener('click', async (e) => {
+  const element = e.target;
+  if (element.classList.contains('like-icon')) {
+    await addLike(element.parentElement.parentElement.parentElement.id);
+    let likes = '';
+    likes = await displayLikes(element.parentElement.parentElement.parentElement.id);
+    element.nextSibling.innerHTML = likes;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', async (e) => {
+  let likesArr = [];
+  likesArr = await getLikes();
+  likesArr.forEach((each) => {
+    let domLikes = '';
+    domLikes = displayLikes(each.item_id);
+    e.target.classList.contains('like-number').innerHTML = domLikes;
+  });
 });
