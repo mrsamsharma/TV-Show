@@ -5,7 +5,6 @@ import displayLikes from './displayLikes.js';
 import addLike from './addLike.js';
 import itemsCounter from './itemsCounter.js';
 import addComment from './addComment.js';
-import commentsCounter from './commentsCounter.js';
 
 const title = document.querySelector('.shows-count');
 
@@ -16,7 +15,7 @@ const shuffle = (array) => {
 const loadShows = async () => {
   let shows = [];
   shows = await getShows();
-  // shuffle(shows);
+  shuffle(shows);
   shows = shows.filter((each, index) => index < 20);
   shows.forEach((each) => {
     addShow(each.id, each.name, each.image.medium);
@@ -79,7 +78,5 @@ popupContainer.addEventListener('click', (e) => {
   `;
     document.querySelector('#name').value = '';
     document.querySelector('#comment').value = '';
-
   }
 });
-

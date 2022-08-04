@@ -62,8 +62,8 @@ export default (element) => {
           </li>
         `;
     });
- 
-    commentsCounter()
+
+    commentsCounter();
   };
 
   loadShow();
