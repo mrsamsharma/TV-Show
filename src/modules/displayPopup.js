@@ -1,4 +1,5 @@
 import getShow from './getShow.js';
+import getShowComments from './getShowComments.js';
 
 export default (element) => {
   const showId = Number(element.parentElement.id);
@@ -34,8 +35,32 @@ export default (element) => {
         ${show.summary}
         </div>
       </div>
+      <!-- comments -->
+      <div class="comments">
+        <h4 class="comments-count">Comments(5)</h4>
+        <ul class="comments-list"></ul>
+        <h4>Add Comment</h4>
+        <form id="add-comment">
+          <input type="text" id="name" placeholder="Your name" />
+          <br />
+          <textarea id="name" cols="36" rows="10" placeholder="Your insights"></textarea>
+          <br>
+          <button id="submit-comment">Comment</button>
+        </form>
+      </div>
     </div>
       `;
+
+    // Displaying comments
+    const showComments = await getShowComments(showId); // show comments array
+    const ul = document.querySelector('.comments-list');
+    showComments.forEach((showComment) => {
+      ul.innerHTML += `
+          <li class="item">
+            <span>${showComment.creation_date} ${showComment.username}:</span> <span>${showComment.comment}</span>
+          </li>
+        `;
+    });
   };
 
   loadShow();
