@@ -16,6 +16,9 @@
 
 [Live Demo Link](https://mrsamsharma.github.io/Tv-Show/)
 
+## Presentation
+[Link to the presentation video](https://drive.google.com/file/d/1_e5uBI6biwFd0IPSj4OO-cdlH74WdKYW/view?usp=sharing)
+
 ## To make a copy
 
 Run:
