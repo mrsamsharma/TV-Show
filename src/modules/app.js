@@ -15,7 +15,7 @@ const shuffle = (array) => {
 const loadShows = async () => {
   let shows = [];
   shows = await getShows();
-  shuffle(shows);
+  // shuffle(shows);
   shows = shows.filter((each, index) => index < 20);
   shows.forEach((each) => {
     addShow(each.id, each.name, each.image.medium);
@@ -80,3 +80,4 @@ popupContainer.addEventListener('click', (e) => {
     document.querySelector('#comment').value = '';
   }
 });
+
