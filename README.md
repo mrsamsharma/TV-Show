@@ -2,6 +2,7 @@
 
 > Created with my coding partner from Kenya. We used an Api containing TV shows and fetched it into an arr and used that array to display shows dynamically to the UI.
 
+![Preview](preview/desktop.png)
 
 ## Built With
 
