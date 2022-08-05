@@ -7,14 +7,14 @@ module.exports = {
     bundle: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'doc'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name][contenthash].js',
     clean: true,
   },
   devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'doc'),
+      directory: path.resolve(__dirname, 'docs'),
     },
     port: 3000,
     open: true,
