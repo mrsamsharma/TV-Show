@@ -6,6 +6,7 @@ export default (id, title, image) => {
   const showImg = document.createElement('img');
   showImg.setAttribute('src', image);
   showImg.setAttribute('alt', title);
+  showImg.className = 'show-img';
   showDiv.appendChild(showImg);
   const infoWrapper = document.createElement('div');
   infoWrapper.className = 'info-wrapper';
