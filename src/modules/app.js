@@ -17,7 +17,7 @@ const loadShows = async () => {
   let shows = [];
   shows = await getShows();
   shuffle(shows);
-  shows = shows.filter((each, index) => index < 20);
+  shows = shows.filter((each, index) => index < 250);
   shows.forEach((each) => {
     addShow(each.id, each.name, each.image.medium);
   });
