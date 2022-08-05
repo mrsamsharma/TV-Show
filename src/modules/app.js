@@ -5,6 +5,7 @@ import displayLikes from './displayLikes.js';
 import addLike from './addLike.js';
 import itemsCounter from './itemsCounter.js';
 import addComment from './addComment.js';
+import getLikes from './getLikes.js';
 
 const title = document.querySelector('.shows-count');
 
@@ -49,7 +50,7 @@ showsWrapper.addEventListener('click', async (e) => {
     likes = await displayLikes(
       element.parentElement.parentElement.parentElement.id,
     );
-    element.nextSibling.innerHTML = likes;
+    element.nextSibling.innerHTML = `${likes} Likes`;
   }
 });
 
@@ -79,4 +80,19 @@ popupContainer.addEventListener('click', (e) => {
     document.querySelector('#name').value = '';
     document.querySelector('#comment').value = '';
   }
+});
+
+// Display Likes on each item on the Homepage
+
+document.addEventListener('DOMContentLoaded', async () => {
+  let showsLikes = [];
+  showsLikes = await getLikes();
+  const loadedShowsBtn = document.querySelectorAll('.like-number');
+  showsLikes.forEach((eachObj) => {
+    loadedShowsBtn.forEach((eachElement) => {
+      if (eachObj.item_id === eachElement.parentElement.parentElement.parentElement.id) {
+        eachElement.textContent = `${eachObj.likes} Likes`;
+      }
+    });
+  });
 });

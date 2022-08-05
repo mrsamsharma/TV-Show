@@ -20,7 +20,7 @@ export default (id, title, image) => {
   likeContainer.appendChild(likeIcon);
   const likesNumber = document.createElement('span');
   likesNumber.className = 'like-number';
-  likesNumber.textContent = 0;
+  likesNumber.textContent = 'loading...';
   likeContainer.appendChild(likesNumber);
   infoWrapper.appendChild(likeContainer);
   showDiv.appendChild(infoWrapper);
