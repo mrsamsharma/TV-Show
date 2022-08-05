@@ -1,6 +1,6 @@
-import commentsCounter from "./commentsCounter.js";
+import commentsCounter from './commentsCounter.js';
 
-test("Count number of comments in the popup", () => {
+test('Count number of comments in the popup', () => {
   document.body.innerHTML = `
   <div class="popup-container" style="display: block;">
   <div class="popup">
@@ -106,6 +106,6 @@ test("Count number of comments in the popup", () => {
 </div>
   </div>
     `;
-  
+
   expect(commentsCounter()).toBe(17);
 });
