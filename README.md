@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://samwfelice.github.io/Tv-Show/)
+[Live Demo Link](https://mrsamsharma.github.io/Tv-Show/)
 
 ## To make a copy
 
